@@ -1,0 +1,239 @@
+<!-- DOCTYPE html> -->
+<html>
+<head>
+        <title>EVERYTHING PLATEAU</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/font-awesome-5.10.0.css')}}">
+        <script src="{{url_for('static', filename='sliderengine/jquery.js')}}"></script>
+        <script src="{{url_for('static', filename='sliderengine/amazingslider.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='sliderengine/amazingslider-1.css')}}">
+        <script src="{{url_for('static', filename='sliderengine/initslider-1.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}">
+        <script src="{{url_for('static', filename='js/bootstrap5.1.3.bundle.min.js')}}"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white text-white">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon text-success"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">
+                    <img id="logo" src="{{url_for('static', filename='images/logo90x90.png')}}" alt="Group 2 Tourism App Logo"/>
+            </a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link success active" aria-current="page" href="{{url_for('index')}}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success" href="#">Tourist Sites</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success" href="#">Hotels</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success" href="#">Taxi Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-success" href="#">Hike Bookings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-black">Restaurants</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-black" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Blog
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{{url_for('blog_post', category='all')}}">All Categories</a></li>
+                  <li><a class="dropdown-item" href="#">Food & Dishes</a></li>
+                  <li><a class="dropdown-item" href="#">Sights & Places</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('login')}}">Login</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+       <!-- This is for slider -->
+       <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:100%;margin:0 auto;">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="{{url_for('static', filename='images/slider-images/colorful-bridge.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0135.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0136.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0137.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0138.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0139.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0140.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0141.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0142.jpg')}}" alt="IMG-20220305-WA0142"  title="IMG-20220305-WA0142" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0143.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+                <li><img src="{{url_for('static', filename='images/slider-images/IMG-20220305-WA0146.jpg')}}" alt="Welcome to Tour Plateau"  title="Welcome to Tour Plateau" data-description="Plan, visit and enjoy the tourism of Plateau state" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- End of Slider HTML -->
+    <div class="container">
+        <div class="row" id="blog" style="margin-top: 30px;">
+                <div class="col col-lg-8 col-sm-12 text-end fs-4">
+                          <br>Plateau State is Nigeria's Home of Peace and Tourism blessed with amazing natural features that makes it an ideal destination for tourist all over the world. Planning on a vacation? Come to Jos! 
+                </div>
+                <div class="col col-lg-4 col-sm-12">
+                  <img src="{{url_for('static', filename='images/png_20220310_140826_0000.png')}}" width="100%" height="auto">
+        </div>
+        </div>
+        </div>
+    <div class="container">
+        <div class="row" id="blog">
+                <div class="col col-lg-4">
+                        <img src="{{url_for('static', filename='images/20220310_140417_0000.png')}}" width="100%" height="auto">
+              </div>
+                <div class="col col-lg-8 md- align-middle fs-4">
+                          <h2>About Us</h2>
+                          Tour Plateau is an organisation whose aim is to showcase the rich toursm of Plateau state as well as guide potential visitors to explore, successfully plan and visit Plateau state with ease.</div>
+        </div>
+        </div>
+        <!--<div class="section bg-dark container-fluid">
+                        <div class="heading">
+                                <h1>Explore With Us</h1>
+                        </div>
+                        <br><br>
+                        <p>Welcome to Plateau State! The home of peace and tourism. </p>
+                        <br>
+                        <br>
+                        <a href="#">Learn More</a>
+               
+                <div class="tours">
+                        <div class="places">
+                                <div class="placeTitle">
+                                        <h2>Gallery</h2>
+                                </div>
+                                <img src="{{url_for('static', filename='images/img1.jpeg')}}" style="width: 300px; height: 250px; border-radius: 12px;">
+                                <br>
+                                <br>
+                                <a href="#">Gallery</a>
+                        </div>
+                        <div class="places">
+                                <div class="placeTitle">
+                                        <h2>Current News</h2>
+                                </div>
+                                <img src="{{url_for('static', filename='images/img2.jpeg')}}" style="width: 300px; height: 250px; border-radius: 12px;">
+                                <br>
+                                <br>
+                                <a href="#">Current News</a>
+                        </div>
+                        <div class="places">
+                                <div class="placeTitle">
+                                        <h2>History</h2>
+                                </div>
+                                <img src="{{url_for('static', filename='images/img3.jpeg')}}" style="width: 300px; height: 250px; border-radius: 12px;">
+                                <br>
+                                <br>
+                                <a href="#">History</a>
+                        </div>
+                </div>
+        </div>-->
+        <div class="section container-fluid" id="blog">
+                <div class="section-heading">
+                        <h1>TOURISM SITES</h1>
+                </div>
+                <div class="post-layout row">
+                        <div class="blog-entry-fullwidth col-lg-2 col-md-6 col-sm-12">
+                                <div class="entry_image">
+                                        <img src="{{url_for('static', filename='images/img1.jpeg')}}" style="width: 100%; height: auto; border-radius: 12px;">
+                                </div>
+                                <div class="post-title fs-2">
+                                        <h3><a href="">RIYOM ROCK</a></h3>
+                                </div>
+                                <div class="card-body">
+                                        LOCATION: <a href="">Riyom, Plateau state</a> <br>
+                                        Estimated Yearly Visits: 20,000 <br>
+                                        Author: <a href="">Group 2</a> 
+                                </div>
+                        </div>
+               
+                        <div class="blog-entry-fullwidth col-lg-2 col-md-6 col-sm-12">
+                                <img src="{{url_for('static', filename='images/img2.jpeg')}}" style="width: 100%; height: auto; border-radius: 12px;">
+                                <div class="post-title">
+                                        <h3><a href="">WILD LIFE PARK</a></h3>
+                                </div>
+                                <div class="post-properties">
+                                        Category: <a href="">Restaurants</a> | Posted on: 3rd March, 2020 | Author: <a href="">Group 2</a> 
+                                </div>
+                        </div>
+
+                        <div class="blog-entry-fullwidth col-lg-2 col-md-6 col-sm-12">
+                                <img src="{{url_for('static', filename='images/img1.jpeg')}}" style="width: 100%; height: auto; border-radius: 12px;">
+                                <div class="post-title">
+                                        <h3><a href="">Top 5 restaurants to visit in Jos</a></h3>
+                                </div>
+                                <div class="post-properties">
+                                        Category: <a href="">Restaurants</a> | Posted on: 3rd March, 2020 | Author: <a href="">Group 2</a> 
+                                </div>
+                        </div>
+               
+                        <div class="blog-entry-fullwidth col-lg-2 col-md-6 col-sm-12">
+                                <img src="{{url_for('static', filename='images/img2.jpeg')}}" style="width: 100%; height: auto; border-radius: 12px;">
+                                <div class="post-title">
+                                        <h3><a href="">Top 5 restaurants to visit in Jos</a></h3>
+                                </div>
+                                <div class="post-properties">
+                                        Category: <a href="">Restaurants</a> | Posted on: 3rd March, 2020 | Author: <a href="">Group 2</a> 
+                                </div>
+                        </div>
+                </div>
+                
+        </div>
+
+        <div class="section bg-dark text-center container-fluid" id="">
+                <br><br><br><br>
+                <span class="text-white"><i class="fa fa-search"></i></span>
+                <br>
+                <p class="text-white align-middle fs-7">
+                        Search through our directory of service provider from hoteliers, transport providers, food vendors etc.<br> in Plateau state.<br>
+                        <br><a href="{{url_for('register')}}" class="btn btn-success fs-2">Search Directory!</a>
+                </p>
+                
+                <br><br><br><br>
+        </div>
+
+        <div class="section bg-light text-center container-fluid" id="">
+                <br><br><br><br>
+                <p class="align-middle fs-7">
+                        Book with Ease!<br> Get instant Notifications on service Deals, Offers, and Promo from hoteliers, transport providers, food vendors etc.<br> in Plateau state.<br>
+                        <br><a href="{{url_for('register')}}" class="btn btn-success fs-2">Register Now!</a>
+                </p>
+                
+                <br><br><br><br>
+        </div>
+
+        <div class="footer">
+                <a href="#">Copyright</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
+                <a href="#">Complaints</a>
+        </div>
+</body>
+</html>

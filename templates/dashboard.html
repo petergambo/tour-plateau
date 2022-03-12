@@ -1,0 +1,169 @@
+
+<!-- DOCTYPE html> -->
+<html>
+<head>
+        <title>Admin Dashboard</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style2.css')}}" />
+    </head>
+<body>
+    <div class="dashboard_body">
+        <div class="sidebar-left">
+            <div class="logo">
+                <h1>
+                        <a href="">
+                                <img id="logo" src="{{url_for('static', filename='images/logo90x90.png')}}" alt="Group 2 Tourism App Logo"/>
+                        </a>
+                </h1>
+        </div>
+            <ul id="admin_menu">
+                <li>
+                    <a href="#"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li>
+                    <a href="{{url_for('blog_post', category='all')}}">Blog</a>
+                </li>
+                <li>
+                    <a href="">Listings</a>
+                </li>
+                <li>
+                    <a href="">Settings</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_container">
+            <div class="account-details">
+                <p>Hello {{session['fname']}} {{session['lname']}} ({{session['email']}}), <br>You are logged in with ID: {{session['uid']}} <br>
+                <a class="botton" href="{{url_for('logout')}}">Logout</a>
+                </p>
+                <main>
+                    <header>
+                
+                    <div class="left">
+                    <h1>Tour Plateau Admin Dashboard</h1>
+                    <p>Total Followers: 5,004</p>
+                    </div>
+                    
+                    <div class="right">
+                    <p>Dark Mode</p>
+                    <div class="toggle" id="toggle">
+                    <div class="circle" onclick="toggleFunction()"></div>
+                    </div>
+                    </div>
+                    </header>
+                    <section class="dashboard">
+                    <div class="card facebook">
+                    <div>
+                    <img src="../static/images/admin/icon-facebook.svg" alt="facebook" />
+                    <div id="account">@tourplateau</div>
+                    </div>
+                    <div>
+                    <p class="year">87</p>
+                    <p>Followers</p>
+                    </div>
+                    <div class="green">
+                    <img src="../static/images/admin/icon-up.svg" alt="up" />
+                    <div>5 Today</div>
+                    </div>
+                    </div>
+                    <div class="card twitter">
+                    <div>
+                    <img src="../static/images/admin/icon-twitter.svg" alt="twitter" />
+                    <div id="account">@tourplateau</div>
+                    </div>
+                    <div>
+                    <p class="year">94</p>
+                    <p>Followers</p>
+                    </div>
+                    <div class="green">
+                    <img src="../static/images/admin/icon-up.svg" alt="up" />
+                    <div>19 Today</div>
+                    </div>
+                    </div>
+                    <div class="card instagram">
+                    <div>
+                    <img src="../static/images/admin/icon-instagram.svg" alt="instagram" />
+                    <div id="account">@tourplateau</div>
+                    </div>
+                    <div>
+                    <p class="year">3K</p>
+                    <p>Followers</p>
+                    </div>
+                    <div class="green">
+                    <img src="../static/images/admin/icon-up.svg" alt="up" />
+                    <div>99 Today</div>
+                    </div>
+                    </div>
+                    <div class="card youtube">
+                    <div>
+                    <img src="../static/images/admin/icon-youtube.svg" alt="youtube" />
+                    <div id="account">Tour Plateau</div>
+                    </div>
+                    <div>
+                    <p class="year">8939</p>
+                    <p>subscribers</p>
+                    </div>
+                    <div>
+                    <img src="../static/images/admin/icon-down.svg" alt="up" />
+                    <div class="red">144 Today</div>
+                    </div>
+                    </div>
+                    </section>
+                    <section class="overview">
+                    <p>Overview - Today</p>
+                    </section>
+                    <section class="dashboard2">
+                    <div class="card2">
+                    <div>
+                    <p>Page Views</p>
+                    <img src="../static/images/admin/icon-facebook.svg" alt="facebook" />
+                    </div>
+                    <div>
+                    <p class="count">98</p>
+                    <div><img src="../static/images/admin/icon-up.svg" alt="up" /> <p>3%</p></div>
+                    </div>
+                    </div>
+                    <div class="card2">
+                    <div>
+                    <p>Page Views</p>
+                    <img src="../static/images/admin/icon-twitter.svg" alt="Twitter" />
+                    </div>
+                    <div>
+                    <p class="count">29</p>
+                    <div><img src="../static/images/admin/icon-up.svg" alt="up" /> <p>5%</p></div>
+                    </div>
+                    </div>
+                    <div class="card2">
+                    <div>
+                    <p>Page Views</p>
+                    <img src="../static/images/admin/icon-instagram.svg" alt="instagram" />
+                    </div>
+                    <div>
+                    <p class="count">108</p>
+                    <div><img src="../static/images/admin/icon-up.svg" alt="up" /> <p>11%</p></div>
+                    </div>
+                    </div>
+                    <div class="card2">
+                    <div>
+                    <p>Page Views</p>
+                    <img src="../static/images/admin/icon-youtube.svg" alt="Youtube" />
+                    </div>
+                    <div>
+                    <p class="count">258</p>
+                    <div><img src="../static/images/admin/icon-up.svg" alt="up" /> <p>7%</p></div>
+                    </div>
+                    </div>
+                    </section> 
+                    
+                    Likes 52 2% Likes 5462 2257% Profile Views 52k 1375% Retweets 117 303%
+                    Likes 507 553% Likes 107 19% Total Views 1407 12%
+                    </main>
+            </div>
+    
+        </div>
+    </div>
+</body>
+</html>

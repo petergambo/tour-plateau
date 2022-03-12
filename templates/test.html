@@ -1,0 +1,27 @@
+<!-- DOCTYPE html> -->
+<html>
+<head>
+        <title>Admin Dashboard</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    </head>
+<body>
+    <div class="dashboard_body">
+        <div class="sidebar-left">
+            <div class="logo">
+                <h1>
+                        <a href="">
+                                <img id="logo" src="{{url_for('static', filename='images/logo90x90.png')}}" alt="Group 2 Tourism App Logo"/>
+                        </a>
+                </h1>
+        </div>
+            
+        </div>
+        <div class="main_container">
+            {{result}}
+        </div>
+    </div>
+</body>
+</html>

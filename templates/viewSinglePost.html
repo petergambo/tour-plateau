@@ -1,0 +1,204 @@
+<!-- DOCTYPE html> -->
+<html>
+<head>
+        <title>{{thisPost['title']}} | TOUR PLATEAU</title>
+        <meta content='' property='description'/>
+        <meta content='article' property='og:type'/>
+        <meta content='TourPlateau.com' property='og:site_name'/>
+        <meta content='750571458425801' property='fb:app_id'/> 
+        <meta content='1598614680158856' property='fb:admins'/> 
+
+        <meta content='TourPlateau.com' name='twitter:domain'/>
+        <meta content='{{thisPost['title']}}' name='twitter:title'/>
+        <meta content='' name='twitter:image'/>
+        <meta content='summary' name='twitter:card'/>
+        <meta content='' name='twitter:description'/>
+        <meta content='@korectzone' name='twitter:site'/>
+        <meta content='@aren_gp' name='twitter:creator'/>
+    
+    <!-- [S.E Verification]-->
+        <meta content='e61bb66d2f9caad5' name='yandex-verification'/>
+        <meta content='8ADC8B6CF63AA06B85AC0B3BA85C96CF' name='msvalidate.01'/>
+
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/font-awesome-5.10.0.css')}}">
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5eecabb9a922da001296f99a&product=inline-share-buttons&cms=sop' async='async'></script>
+        <script src="{{url_for('static', filename='js/bootstrap5.1.3.bundle.min.js')}}"></script>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-success text-white">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">
+                            <img id="logo" src="{{url_for('static', filename='images/logo90x90.png')}}" alt="Group 2 Tourism App Logo"/>
+                    </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Tourist Sites</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Hotels</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Taxi Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Hike Bookings</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black">Restaurants</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Blog
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="{{url_for('blog_post', category='all')}}">All Categories</a></li>
+                          <li><a class="dropdown-item" href="#">Food & Dishes</a></li>
+                          <li><a class="dropdown-item" href="#">Sights & Places</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        <br>
+<div class="container">
+<div class="display-blog-container">
+        <div class="section" id="blog">
+                <ul class="breadcrumb ">
+                        <li class="breadcrumb-item">
+                                <a href="">Home</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                                <a href="">{{thisPost['category']}}</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                                <a class="disabled" href="">{{thisPost['title']}}</a>
+                        </li>
+                </ul>
+                <div class="section-heading">
+                        <h2>{{thisPost['title']}}</h2>
+                </div>
+                <div class="post-properties-all">
+                        <i class="fa fa-calendar"></i> {{thisPost['date_posted']}} | <i class="fa fa-user"></i> <a href="">{{thisPost['author']}}</a> | 
+                        <span class="catOnImage"><i class="fa fa-folder"></i> <a href="">{{thisPost['category']}}</a></span> | <i class="fa fa-eye"></i> {{thisPost['views']}} | <i class="fa fa-comment"></i> {{thisPost['comment_count']}}
+                
+                </div>
+                <div class="row">
+                <div class="col-lg-10">
+                        <div class='sharethis-inline-share-buttons'/>
+                        <div class="card">
+                                <div class="post_cover_image">
+                                        <img src="{{url_for('static', filename=thisPost['post_thumbs'])}}">
+                                </div> 
+                        <div class="card-header">
+                        <div class="card-title">
+                                
+                        </div>
+                        </div>
+                        <div class="card-body">        
+                        
+                                <p>{{thisPost['body']}}
+                                </p>
+                        </div>
+                </div>
+                <div class='sharethis-inline-share-buttons'/>
+        </div>
+        </div>
+        <div class="row">
+                <div class="col-lg-10">
+                        <h2>Comments: {{pass}}</h2>
+                        {% for comment in thisComments: %}
+                        <hr width="100%"/>
+                                <a href="">{{comment['comment_by']}}</a> says: <br> {{comment['commentBody']}}<br> on: {{comment['comment_date']}}
+                        {% endfor %}
+                        <div class="addComment">
+                                <form action="{{url_for('viewSinglePost', post_url = thisPost['id'])}}">
+                                        <h2>Add Comment</h2>
+                                        <input name="commentName" type="type"/>
+                                        <textarea name="comment">
+                                        </textarea>
+                                        <input type="submit" value="Post Comment"/>
+                                </form>
+                        </div>
+                </div>
+        </div>
+
+                
+                
+        </div>
+
+        <div class="section" id="">
+                This is an empty section for now. Planning to add a list of Upcoming Hike/Carnival/Cultural Events
+        </div>
+</div>
+<div class="blog-sidebar">
+        <div class="search-form">
+                <div class="reg_form">
+                        <!-- <input type="text" name="search" style="float:left"/>
+                        <input type="submit" value="Submit" style="float:right; margin-bottom: 10px;"> -->
+                </div>
+        </div>
+        <div class="section-heading">
+                <h3>Popular Post</h3>
+        </div>
+        <div class="sidebar-section-body">
+                <ul>
+                        <li>
+                                <a href="#">Top 5 restaurants to visit in Jos</a><br>
+                               Hits:  1M
+                        </li>
+                        <li>
+                                <a href="#">5 Facts about the Riyom rock you don't know</a><br>
+                                Hits:  940k
+                        </li>
+                        <li>
+                                <a href="#">Top 5 Taxi Vendors to check in Jos</a><br>
+                                Hits:  900K
+                        </li>
+                </ul>
+        </div>
+        
+        <div class="section-heading">
+                <h3>Promotions</h3>
+        </div>
+        <div class="sidebar-section-body">
+                <img src="{{url_for('static', filename='images/ads/sidebar-ads-1.jpg')}}" width="280" height="350"/>
+        </div>
+
+        <div class="section-heading">
+                <h3>Most Commented</h3>
+        </div>
+        <div class="sidebar-section-body">
+
+        </div>
+</div>
+</div>
+        <div class="footer">
+                <a href="#">Copyright</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
+                <a href="#">Complaints</a>
+        </div>
+</body>
+</html>

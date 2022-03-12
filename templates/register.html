@@ -1,0 +1,102 @@
+<!-- DOCTYPE html> -->
+<html>
+<head>
+        <title>EVERYTHING PLATEAU</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <script src="{{url_for('static', filename='sliderengine/jquery.js')}}"></script>
+        <script src="{{url_for('static', filename='sliderengine/amazingslider.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='sliderengine/amazingslider-1.css')}}">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <script src="{{url_for('static', filename='sliderengine/initslider-1.js')}}"></script>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}">
+        <script src="{{url_for('static', filename='js/bootstrap5.1.3.bundle.min.js')}}"></script>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-success text-white">
+                <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">
+                            <img id="logo" src="{{url_for('static', filename='images/logo90x90.png')}}" alt="Group 2 Tourism App Logo"/>
+                    </a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Tourist Sites</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Hotels</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Taxi Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black" href="#">Hike Bookings</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-black">Restaurants</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-black" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Blog
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="{{url_for('blog_post', category='all')}}">All Categories</a></li>
+                          <li><a class="dropdown-item" href="#">Food & Dishes</a></li>
+                          <li><a class="dropdown-item" href="#">Sights & Places</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{{url_for('login')}}">Login</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+    <div class="body">
+        <div class="form_body">
+            <div class="reg_form">
+                <div class="notices">{{msg}}</div>
+                <h2>Create free account!</h2>
+                <form action="{{url_for('register')}}" method="POST" autocomplete="off">
+                    <input type="text" name="username" placeholder="Username"/>
+                    <input type="text" name="email" placeholder="Email"/>
+                    <input type="text" name="firstName" placeholder="First Name"/>
+                    <input type="text" name="lastName" placeholder="Last Name"/>
+                    <input type="password" name="pwd" placeholder="Password"/>
+                    <input type="password" name="ver_pwd" placeholder="Retype Password"/>
+                    <label for="gender">Gender: </label>
+                        <input name="gender" type="radio" value="male"/> Male       
+                        <input name="gender" type="radio" value="female"/> Female</br>
+                    <label for="country">Country: </label>
+                        <select name="country" id="country">
+                        <option value="">select country</option>
+                        <option value="ussr">Russia</option>
+                        <option value="ukr">Ukraine</option>
+                        <option value="ng">Nigeria</option>
+                        <option value="gh">Ghana</option>
+                        <option value="za">South Africa</option>
+                        <option value="us">USA</option>
+                        <option value="sar">Saudi Arabia</option>
+                        <option value="egy">Egypt</option>
+                        <option value="egy">more coming</option>
+                    </select> <br>
+                    <input type="checkbox" name="tc"/> Accept our <a href="/terms_and_conditions.html">Terms and Conditions</a>
+                    <button>Create Account</button>
+                </form>
+                <p>Already have an account? <a href="{{url_for('login')}}">Login here</a>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

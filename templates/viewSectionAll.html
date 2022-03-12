@@ -1,0 +1,128 @@
+<!-- DOCTYPE html> -->
+<html>
+<head>
+        <title>EVERYTHING PLATEAU</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/font-awesome.scss')}}">
+</head>
+<body>
+        <div class="navbar">
+                <div class="logo">
+                        <h1>
+                                <a href="">
+                                        <img id="logo" src="{{url_for('static', filename='images/logo90x90.png')}}" alt="Group 2 Tourism App Logo"/>
+                                </a>
+                        </h1>
+                </div>
+                <div class="menu">
+                        <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Tourist Sites</a></li>
+                                <li><a href="#">Hotels</a></li>
+                                <li><a href="#">Restaurants</a></li>
+                                <li><a href="#">Taxi Services</a></li>
+                                <li><a href="#">Hike Bookings</a></li>
+                        </ul>
+                </div>
+                <div class="signup">
+                        <a href="{{url_for('register')}}">Sign Up</a>
+                </div>
+        </div>
+        <br>
+<div class="container-fluid">
+<div class="display-blog-container">
+        <div class="section" id="blog">
+                <div class="section-heading">
+                        <h2>BLOG</h2>
+                </div>
+                <div class="row">
+                        <br>
+                        <br>
+                {% for post in allpost %}
+                
+                        <div class="col-lg-4">
+                                <div class="card">
+                                <div class="card-header">
+                                <div class="card-title">
+                                        <h2><a href="{{url_for('viewSinglePost', post_url = post['id'])}}">{{post['title']}}</a></h2>
+                                <div class="post-properties-all">
+                                                <i class="fa fa-calendar"></i> {{post['date_posted']}} | <i class="fa fa-user"></i> <a href="">{{post['author']}}</a> 
+                                                <span class="catOnImage"><i class="fa fa-folder"></i><a href="">{{post['category']}}</a></span>
+                                                
+                                </div>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                        <div class="entry_image">
+                                                <img src="{{url_for('static', filename=post['post_thumbs'])}}">
+                                        </div>          
+                                
+                                        <p>{{post['body']}} <a href="{{url_for('viewSinglePost', post_url = post['id'])}}">Read more...</a>
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+                {% endfor %}
+                </div>
+                
+        </div>
+
+        <div class="section" id="">
+                This is an empty section for now. Planning to add a list of Upcoming Hike/Carnival/Cultural Events
+        </div>
+</div>
+<div class="blog-sidebar">
+        <div class="search-form">
+                <div class="reg_form">
+                        <!-- <input type="text" name="search" style="float:left"/>
+                        <input type="submit" value="Submit" style="float:right; margin-bottom: 10px;"> -->
+                </div>
+        </div>
+        <div class="section-heading">
+                <h3>Popular Post</h3>
+        </div>
+        <div class="sidebar-section-body">
+                <ul>
+                        <li>
+                                <a href="#">Top 5 restaurants to visit in Jos</a><br>
+                               Hits:  1M
+                        </li>
+                        <li>
+                                <a href="#">5 Facts about the Riyom rock you don't know</a><br>
+                                Hits:  940k
+                        </li>
+                        <li>
+                                <a href="#">Top 5 Taxi Vendors to check in Jos</a><br>
+                                Hits:  900K
+                        </li>
+                </ul>
+        </div>
+        
+        <div class="section-heading">
+                <h3>Promotions</h3>
+        </div>
+        <div class="sidebar-section-body">
+                <img src="{{url_for('static', filename='images/ads/sidebar-ads-1.jpg')}}" width="280" height="350"/>
+        </div>
+
+        <div class="section-heading">
+                <h3>Most Commented</h3>
+        </div>
+        <div class="sidebar-section-body">
+
+        </div>
+</div>
+</div>
+        <div class="footer">
+                <a href="#">Copyright</a>
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookies</a>
+                <a href="#">Complaints</a>
+        </div>
+</body>
+</html>
